@@ -13,7 +13,7 @@ function CreateTicket() {
                         <a href="" className="list-group-item list-group-item-action p-0">
                             <div className="d-flex align-items-center">
                                 <div className="icon-box">
-                                    <i className="fa fa-plus-circle"></i>
+                                    <i className="fa fa-plus-circle text-warning"></i>
                                 </div>
                                 <h4 className="mb-0 ms-3 flex-grow-1">Account Opening</h4>
                                 <i className="fa fa-angle-down me-4"></i>
@@ -23,7 +23,7 @@ function CreateTicket() {
                         <a href="" className="list-group-item list-group-item-action p-0">
                             <div className="d-flex align-items-center">
                                 <div className="icon-box">
-                                    <i className="fa fa-user-circle-o"></i>
+                                    <i className="fa fa-user-circle-o text-warning"></i>
                                 </div>
                                 <h4 className="mb-0 ms-3 flex-grow-1">Your Mifflin Account</h4>
                                 <i className="fa fa-angle-down me-4"></i>
@@ -33,7 +33,7 @@ function CreateTicket() {
                         <a href="" className="list-group-item list-group-item-action p-0">
                             <div className="d-flex align-items-center">
                                 <div className="icon-box">
-                                    <i className="fa fa-telegram"></i>
+                                    <i className="fa fa-telegram text-warning"></i>
                                 </div>
                                 <h4 className="mb-0 ms-3 flex-grow-1">Kite</h4>
                                 <i className="fa fa-angle-down me-4"></i>
@@ -43,7 +43,7 @@ function CreateTicket() {
                         <a href="" className="list-group-item list-group-item-action p-0">
                             <div className="d-flex align-items-center">
                                 <div className="icon-box">
-                                    <i className="fa fa-inr"></i>
+                                    <i className="fa fa-inr text-warning"></i>
                                 </div>
                                 <h4 className="mb-0 ms-3 flex-grow-1">Funds</h4>
                                 <i className="fa fa-angle-down me-4"></i>
@@ -53,7 +53,7 @@ function CreateTicket() {
                         <a href="" className="list-group-item list-group-item-action p-0">
                             <div className="d-flex align-items-center">
                                 <div className="icon-box">
-                                    <i className="fa fa-dot-circle-o"></i>
+                                    <i className="fa fa-dot-circle-o text-warning"></i>
                                 </div>
                                 <h4 className="mb-0 ms-3 flex-grow-1">Console</h4>
                                 <i className="fa fa-angle-down me-4"></i>
@@ -63,7 +63,7 @@ function CreateTicket() {
                         <a href="" className="list-group-item list-group-item-action p-0">
                             <div className="d-flex align-items-center">
                                 <div className="icon-box">
-                                    <i className="fa fa-clock-o"></i>
+                                    <i className="fa fa-clock-o text-warning"></i>
                                 </div>
                                 <h4 className="mb-0 ms-3 flex-grow-1">Coin</h4>
                                 <i className="fa fa-angle-down me-4"></i>
