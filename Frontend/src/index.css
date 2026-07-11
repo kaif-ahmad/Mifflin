@@ -15,3 +15,8 @@ code {
 .nav-link{
   margin-left: 30px;
 }
+
+.footer-a-tags {
+    color: #ffc107;      /* Bootstrap warning color */
+    text-decoration: none;
+}

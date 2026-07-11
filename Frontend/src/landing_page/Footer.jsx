@@ -10,31 +10,31 @@ function Footer() {
                 </div>
                 <div className="col mt-3">
                     <p className='fw-semibold'>Company</p>
-                    <a className='' style={{ textDecoration: "none" }} href="">Open demat account</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Minor demat account</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">NRI demat account</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Fund transfer</a><br />
+                    <a className='footer-a-tags' href="">Open demat account</a><br />
+                    <a className='footer-a-tags' href="">Minor demat account</a><br />
+                    <a className='footer-a-tags' href="">NRI demat account</a><br />
+                    <a className='footer-a-tags' href="">Fund transfer</a><br />
                 </div>
                 <div className="col mt-3">
                     <p className='fw-semibold'>Support</p>
-                    <a className='' style={{ textDecoration: "none" }} href="">Z-Connect blog</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Support portal</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">How to file a complaint?</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Downloads</a><br />
+                    <a className='footer-a-tags' href="">Z-Connect blog</a><br />
+                    <a className='footer-a-tags' href="">Support portal</a><br />
+                    <a className='footer-a-tags' href="">How to file a complaint?</a><br />
+                    <a className='footer-a-tags' href="">Downloads</a><br />
                 </div>
                 <div className="col mt-3">
                     <p className='fw-semibold'>Account</p>
-                    <a className='' style={{ textDecoration: "none" }} href="">demat account</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Open demat account</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Minor account</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Minor demat account</a><br />
+                    <a className='footer-a-tags' href="">demat account</a><br />
+                    <a className='footer-a-tags' href="">Open demat account</a><br />
+                    <a className='footer-a-tags' href="">Minor account</a><br />
+                    <a className='footer-a-tags' href="">Minor demat account</a><br />
                 </div>
                 <div className="col mt-3">
                     <p className='fw-semibold'>Quick Links</p>
-                    <a className='' style={{ textDecoration: "none" }} href="">Upcoming IPOs</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Economic calendar</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Sectors</a><br />
-                    <a className='' style={{ textDecoration: "none" }} href="">Gift Nifty</a><br />
+                    <a className='footer-a-tags' href="">Upcoming IPOs</a><br />
+                    <a className='footer-a-tags' href="">Economic calendar</a><br />
+                    <a className='footer-a-tags' href="">Sectors</a><br />
+                    <a className='footer-a-tags' href="">Gift Nifty</a><br />
                 </div>
             </div>
             <div className="row mb-3">
