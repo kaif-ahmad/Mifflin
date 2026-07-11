@@ -1,8 +1,8 @@
 import React from 'react';
 
-function OpenAccounts() {
+function OpenAccount() {
     return ( 
-        <div className='container p-5'>
+        <div className='container p-5 mb-4'>
             <div className='row text-center'>
                 <h1 className='mt-5'>Open a Mifflin Account</h1>
                 <p>Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and F&O trades.</p>
@@ -12,4 +12,4 @@ function OpenAccounts() {
     );
 }
 
-export default OpenAccounts;
+export default OpenAccount;

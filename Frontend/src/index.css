@@ -20,3 +20,64 @@ code {
     color: #ffc107;      /* Bootstrap warning color */
     text-decoration: none;
 }
+
+.icon-box{
+    width:75px;
+    height:72px;
+    background:#f8f9fa;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#387ed1;
+    font-size:28px;
+}
+
+.list-group-item{
+    height:76px;
+    border:1px solid #ececec;
+}
+
+.list-group-item h4{
+    font-size:20px;
+    color:#424242;
+    font-weight:500;
+}
+
+.list-group-item .fa-angle-down{
+    font-size:26px;
+    color:#387ed1;
+}
+
+.notice-box{
+    border-left:6px solid #ff9800;
+    background:#fff7eb;
+    padding:20px;
+}
+
+.notice-box ul{
+    padding-left:20px;
+}
+
+.notice-box a{
+    color:#387ed1;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.card-header{
+    font-size:20px;
+    padding:18px;
+}
+
+.list-group-flush .list-group-item{
+    height:auto;
+    padding:18px 24px;
+    color:#387ed1;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.list-group-flush .list-group-item:hover,
+.notice-box a:hover{
+    text-decoration:underline;
+}
