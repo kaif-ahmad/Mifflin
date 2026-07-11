@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './App.css';
 
 import NavBar from './landing_page/NavBar';
 import Footer from './landing_page/Footer';
@@ -14,8 +14,8 @@ import SupportPage from './landing_page/support/SupportPage';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import NotFound from './landing_page/NotFound';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+function App(){
+  return(
   <BrowserRouter>
     <NavBar></NavBar>
     <Routes>
@@ -29,5 +29,7 @@ root.render(
     </Routes>
     <Footer></Footer>
   </BrowserRouter>
-);
+  );
+}
 
+export default App;
