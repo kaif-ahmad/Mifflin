@@ -1,14 +1,33 @@
-import React,{ useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { holdings } from "../data/data";
 import axios from "axios";
+import { VerticalGraph } from "./VerticalGraph";
 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
-  useEffect(()=>{
-    axios.get("http://localhost:5175/allHoldings").then((res)=>{
+  useEffect(() => {
+    axios.get("http://localhost:5175/allHoldings").then((res) => {
       setAllHoldings(res.data);
     });
   }, []);
+
+  const labels = allHoldings.map((stock) => {
+    return stock.name;
+  });
+
+  console.log(labels);
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Stock-Price',
+        data: allHoldings.map((stock)=>stock.price),
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+    ],
+  };
+  console.log(data);
+
   return (
     <>
       <h3 className="title">Holdings ({allHoldings.length})</h3>
@@ -39,7 +58,7 @@ const Holdings = () => {
                 <td>{stock.avg.toFixed(2)}</td>
                 <td>{stock.price.toFixed(2)}</td>
                 <td>{currValue.toFixed(2)}</td>
-                <td className={profClass}>{(currValue-stock.avg*stock.qty).toFixed(2)}</td>
+                <td className={profClass}>{(currValue - stock.avg * stock.qty).toFixed(2)}</td>
                 <td className={profClass}>{stock.net}</td>
                 <td className={dayClass}>{stock.day}</td>
               </tr>
@@ -66,6 +85,7 @@ const Holdings = () => {
           <p>P&L</p>
         </div>
       </div>
+      <VerticalGraph data={data} />
     </>
   );
 };
