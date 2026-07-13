@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5175;
 const url = process.env.MONGO_URL;
 
 const { HoldingsModel } = require("../backend/model/HoldingsModel");
-const { OrdersMode } = require("../backend/model/OrdersModel");
+const { OrdersModel } = require("../backend/model/OrdersModel");
 const { PositionsModel } = require("../backend/model/PositionsModel");
 
 app.get('/allHoldings',async(req,res)=>{
@@ -26,6 +26,18 @@ app.get('/allPositions',async(req,res)=>{
     res.json(allPositions);
 });
 
+app.post("/newOrder", async (req, res) => {
+  let newOrder = new OrdersModel({
+    name: req.body.name,
+    qty: req.body.qty,
+    price: req.body.price,
+    mode: req.body.mode, 
+  });
+
+  newOrder.save();
+
+  res.send("Order saved!");
+});
 
 app.listen(PORT,()=>{
     console.log(`Listening on Port : ${PORT}`);
