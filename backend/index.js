@@ -2,8 +2,12 @@ require('dotenv').config();
 
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
+
+app.use(cors()); app.use(bodyParser.json())
 
 const PORT = process.env.PORT || 5175;
 const url = process.env.MONGO_URL;
@@ -11,6 +15,16 @@ const url = process.env.MONGO_URL;
 const { HoldingsModel } = require("../backend/model/HoldingsModel");
 const { OrdersMode } = require("../backend/model/OrdersModel");
 const { PositionsModel } = require("../backend/model/PositionsModel");
+
+app.get('/allHoldings',async(req,res)=>{
+    let allHoldings = await HoldingsModel.find({});
+    res.json(allHoldings);
+});
+
+app.get('/allPositions',async(req,res)=>{
+    let allPositions = await PositionsModel.find({});
+    res.json(allPositions);
+});
 
 
 app.listen(PORT,()=>{
