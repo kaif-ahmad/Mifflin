@@ -15,11 +15,16 @@ const BuyActionWindow = ({ uid }) => {
     const handleBuyClick = async () => {
         console.log("Buy button clicked");
         try {
+            const token = localStorage.getItem("token");
             await axios.post("http://localhost:5175/newOrder", {
                 name: uid,
-                qty: stockQuantity,
-                price: stockPrice,
+                qty: Number(stockQuantity),
+                price: Number(stockPrice),
                 mode: "BUY",
+            }, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
             });
             console.log("Request sent successfully");
             closeBuyWindow();

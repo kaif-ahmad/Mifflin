@@ -5,8 +5,15 @@ import axios from "axios";
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
   useEffect(()=>{
-    axios.get("http://localhost:5175/allPositions").then((res)=>{
+    const token = localStorage.getItem("token");
+    axios.get("http://localhost:5175/allPositions", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }).then((res)=>{
       setAllPositions(res.data);
+    }).catch(err => {
+      console.error("Error fetching positions:", err);
     });
   }, []);
   return (
@@ -33,7 +40,7 @@ const Positions = () => {
             return (
               <tr key={index} className="">
                 <td>{stock.product}</td>
-                <td>{stock.namet}</td>
+                <td>{stock.name}</td>
                 <td>{stock.qty}</td>
                 <td>{stock.avg.toFixed(2)}</td>
                 <td>{stock.price.toFixed(2)}</td>

@@ -6,8 +6,15 @@ import { VerticalGraph } from "./VerticalGraph";
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5175/allHoldings").then((res) => {
+    const token = localStorage.getItem("token");
+    axios.get("http://localhost:5175/allHoldings", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }).then((res) => {
       setAllHoldings(res.data);
+    }).catch(err => {
+      console.error("Error fetching holdings:", err);
     });
   }, []);
 

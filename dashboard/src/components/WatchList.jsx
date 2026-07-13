@@ -87,7 +87,7 @@ const WatchListItem = ({ stock }) => {
 
 //ON HOVER OPTIONS ON WATCHLIST
 const WatchListActions = ({ uid }) => {
-  const { openBuyWindow } = useContext(GeneralContext);
+  const { openBuyWindow, openSellWindow } = useContext(GeneralContext);
 
   return (
     <span className="actions">
@@ -102,7 +102,7 @@ const WatchListActions = ({ uid }) => {
         </Tooltip>
 
         <Tooltip title="Sell (S)" placement="top" arrow TransitionComponent={Grow}>
-          <button className="sell">Sell</button>
+          <button className="sell" onClick={() => openSellWindow(uid)}>Sell</button>
         </Tooltip>
 
         <Tooltip title="Analytics (A)" placement="top" arrow TransitionComponent={Grow}>

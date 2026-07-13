@@ -9,8 +9,14 @@ const Menu = () => {
     setSelectedMenu(index);
   }
 
-  const handleProfileClick = (index) =>{
+  const handleProfileClick = () => {
     setIsProfileDropdown(!isProfileDropdownOpen);
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    window.location.href = "http://localhost:5173/signup";
   }
 
   const menuClass = "menu";
@@ -53,9 +59,40 @@ const Menu = () => {
           </li>
         </ul>
         <hr />
-        <div className="profile" onClick={()=>handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+        <div className="profile" onClick={handleProfileClick} style={{ position: "relative", cursor: "pointer" }}>
+          <div className="avatar">
+            {localStorage.getItem("username")?.substring(0, 2).toUpperCase() || "ZU"}
+          </div>
+          <p className="username">{localStorage.getItem("username") || "USERID"}</p>
+          {isProfileDropdownOpen && (
+            <div className="profile-dropdown" style={{
+              position: "absolute",
+              top: "50px",
+              right: "0px",
+              background: "#fff",
+              border: "1px solid #ddd",
+              boxShadow: "0px 4px 12px rgba(0,0,0,0.15)",
+              borderRadius: "4px",
+              padding: "10px",
+              zIndex: 1000,
+              width: "100px",
+              textAlign: "center"
+            }}>
+              <button onClick={handleLogout} style={{
+                background: "#ff5722",
+                color: "#fff",
+                border: "none",
+                padding: "6px 12px",
+                borderRadius: "3px",
+                cursor: "pointer",
+                fontSize: "0.85rem",
+                fontWeight: "bold",
+                width: "100%"
+              }}>
+                Log Out
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
